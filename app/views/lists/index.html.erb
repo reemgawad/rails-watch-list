@@ -1,9 +1,21 @@
-<h1>Lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1585647347384-2593bc35786b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);">
+  <div class="container">
+    <h1>Movie saver</h1>
+    <p>Keep track of your favorites</p>
+  </div>
+</div>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <h3 class="mt-5">My Lists</h3>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="card-category col-sm m-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)">
+        <%= link_to list.name, list_path(list) %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<p><%= link_to "Add a new list", new_list_path %></p>
+<div class="btn-container">
+  <%= link_to "Add a new list", new_list_path, class: "btn btn-outline-danger mt-5" %>
+</div>
