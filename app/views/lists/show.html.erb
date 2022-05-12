@@ -1,0 +1,12 @@
+<h1><%= @list.name %></h1>
+
+<ul class="list-group">
+  <% @list.bookmarks.each do |bookmark| %>
+    <li class="list-group-item">
+      <%= bookmark.movie.title %> -- Comment: <%= bookmark.comment %>
+      <span><%= link_to "Delete bookmark", bookmark_path(bookmark), method: :delete %></span>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Add a bookmark", new_list_bookmark_path(@list) %></p>

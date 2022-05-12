@@ -12,5 +12,8 @@
 
   <body>
     <%= yield %>
+    <% if action_name != 'index' %>
+      <%= link_to "Home", lists_path %>
+    <% end %>
   </body>
 </html>
