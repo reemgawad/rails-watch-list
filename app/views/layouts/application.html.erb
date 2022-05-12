@@ -8,12 +8,13 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/384a3f7d08.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <%= yield %>
     <% if action_name != 'index' %>
-      <%= link_to "Home", lists_path %>
+      <%= link_to "Home", lists_path, class: "home-link" %>
     <% end %>
   </body>
 </html>

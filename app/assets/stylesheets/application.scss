@@ -11,3 +11,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.home-link {
+  text-decoration: none;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  color: rgb(186, 26, 26);
+}
