@@ -1,4 +1,6 @@
-<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);">
+<% def_img = 'https://www.twosisterscrafting.com/wp-content/uploads/2016/01/perfect-stovetop-popcorn-1200-featured-735x735.jpg' %>
+
+<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : def_img %>);">
   <div class="container">
     <h1><%= @list.name %></h1>
   </div>
